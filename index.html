@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
-	<title>Subtitle</title>
-	<link rel="stylesheet" href="./style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Subtitles</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 
 <body>
-	<div>
-		<p>Enter text to show:</p>
-
-		<br>
-		<div>
-			<textarea id="data" cols="120" rows="10"></textarea>
+	<div class="container pt-3">
+		<div class="row justify-content-md-center mb-3">
+			<p class="h5">Enter text to show:</p>
 		</div>
+		<div class="row justify-content-md-center">
+			<textarea id="data" cols="50" rows="5"></textarea>
+		</div>
+		<div class="row justify-content-md-center pt-3">
+			<input type="button" class="btn btn-outline-primary" value="Show Data" id="showData">
+		</div>
+		<br/>
+		<br/>
 
-		<input type="button" value="Show Data" id="showData">
-
-		<div id='text'></div>
+		<div id='text' class="text-center pl-5 pr-5 mb-5"></div>
 	</div>
+	<script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 
 </html>
