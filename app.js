@@ -8,10 +8,17 @@ function loadData() {
 		alert("The textarea doesn't have text");
 		return;
 	}
-	let text = '';
+	let text = '<ul class="list-group pl-5 pr-5">';
 	data = data.split('\n');
+	let style = true;
+	let counter = 0;
 	for (let line of data) {
-		text += '<br>' + line;
+		if (line.length > 0) {
+			counter++;
+			text += '<p class="list-group-item list-group-item-' + (style ? 'warning' : 'info') + ' pl-5">' + counter + '.-&emsp;' + line + '</p>';
+			style = !style;
+		}
 	}
+	text += '</ul>';
 	document.getElementById('text').innerHTML = text;
 }
