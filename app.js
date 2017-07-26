@@ -13,6 +13,8 @@ function loadData() {
 	let style = true;
 	let counter = 0;
 	for (let line of data) {
+		line = line.replace(/^[\d].*[\d]/, '');
+		line = line.replace(/^[\d].*/, '');
 		if (line.length > 0) {
 			counter++;
 			text += '<p class="list-group-item list-group-item-' + (style ? 'warning' : 'info') + ' pl-5">' + counter + '.-&emsp;' + line + '</p>';
